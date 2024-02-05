@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  spotifyIOS21
+//  spotifyAnalogSwift
 //
-//  Created by Isa Melsov on 2/2/24.
+//  Created by Isa Melsov on 31/1/24.
 //
 
 import UIKit
@@ -10,10 +10,24 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        
+        if AuthManager.shared.isSignedIn {
+            window.rootViewController = SearchViewController()
+        } else {
+            let navVc = UINavigationController(rootViewController: AuthViewController())
+            navVc.navigationBar.prefersLargeTitles = true
+            navVc.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
+            window.rootViewController = navVc
+        }
+        
+        window.makeKeyAndVisible()
+        self.window = window
+        
         return true
     }
 
