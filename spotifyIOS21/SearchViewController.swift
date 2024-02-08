@@ -10,13 +10,14 @@ import WebKit
 
 class SearchViewController: UIViewController {
     
-    private var searchBar: UISearchBar = {
+    private lazy var searchBar: UISearchBar = {
         let view = UISearchBar()
         view.placeholder = "What do you want to listen to?"
         view.keyboardType = .default
         view.tintColor = UIColor.white
         view.keyboardAppearance = .dark
         view.searchTextField.font = .monospacedDigitSystemFont(ofSize: 15, weight: .semibold)
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -45,6 +46,7 @@ class SearchViewController: UIViewController {
     
     private func setupSubviews() {
         view.addSubview(tableView)
+        view.addSubview(searchBar)
     }
     
     private func setupConstraints() {

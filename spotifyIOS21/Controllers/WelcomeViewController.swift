@@ -47,7 +47,7 @@ class WelcomeViewController: UIViewController {
             return
         }
         let mainTabBarVC = SearchViewController()
-//        self.navigationController?.pushViewController(mainTabBarVC, animated: true)
-        present(mainTabBarVC, animated: true)
+        self.navigationController?.pushViewController(mainTabBarVC, animated: true)
+//        present(mainTabBarVC, animated: true)
     }
 }
