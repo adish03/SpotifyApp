@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB8758282B751E41001D113B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8758272B751E41001D113B /* SearchViewController.swift */; };
 		FBCE1E932B6CF26E000AB1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE1E922B6CF26E000AB1A8 /* AppDelegate.swift */; };
 		FBCE1E952B6CF26E000AB1A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE1E942B6CF26E000AB1A8 /* SceneDelegate.swift */; };
-		FBCE1E972B6CF26E000AB1A8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE1E962B6CF26E000AB1A8 /* SearchViewController.swift */; };
 		FBCE1E9C2B6CF26F000AB1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCE1E9B2B6CF26F000AB1A8 /* Assets.xcassets */; };
 		FBCE1E9F2B6CF26F000AB1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCE1E9D2B6CF26F000AB1A8 /* LaunchScreen.storyboard */; };
 		FBCE1EAB2B7124DC000AB1A8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE1EAA2B7124DC000AB1A8 /* AuthManager.swift */; };
 		FBCE1EAD2B712862000AB1A8 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE1EAC2B712862000AB1A8 /* AuthModel.swift */; };
 		FBCE1EAF2B7128BB000AB1A8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE1EAE2B7128BB000AB1A8 /* AuthViewController.swift */; };
+		FBCE1EB22B720593000AB1A8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE1EB12B720593000AB1A8 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB8758272B751E41001D113B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FBCE1E8F2B6CF26E000AB1A8 /* spotifyIOS21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotifyIOS21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCE1E922B6CF26E000AB1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCE1E942B6CF26E000AB1A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBCE1E962B6CF26E000AB1A8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FBCE1E9B2B6CF26F000AB1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBCE1E9E2B6CF26F000AB1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBCE1EA02B6CF26F000AB1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBCE1EAA2B7124DC000AB1A8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		FBCE1EAC2B712862000AB1A8 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		FBCE1EAE2B7128BB000AB1A8 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		FBCE1EB12B720593000AB1A8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				FBCE1EA72B7124A2000AB1A8 /* Managers */,
 				FBCE1EA62B712497000AB1A8 /* Resources */,
 				FBCE1EA02B6CF26F000AB1A8 /* Info.plist */,
+				FB8758272B751E41001D113B /* SearchViewController.swift */,
 			);
 			path = spotifyIOS21;
 			sourceTree = "<group>";
@@ -100,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCE1EAE2B7128BB000AB1A8 /* AuthViewController.swift */,
-				FBCE1E962B6CF26E000AB1A8 /* SearchViewController.swift */,
+				FBCE1EB12B720593000AB1A8 /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,12 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBCE1E972B6CF26E000AB1A8 /* SearchViewController.swift in Sources */,
 				FBCE1EAB2B7124DC000AB1A8 /* AuthManager.swift in Sources */,
+				FB8758282B751E41001D113B /* SearchViewController.swift in Sources */,
 				FBCE1E932B6CF26E000AB1A8 /* AppDelegate.swift in Sources */,
 				FBCE1E952B6CF26E000AB1A8 /* SceneDelegate.swift in Sources */,
 				FBCE1EAF2B7128BB000AB1A8 /* AuthViewController.swift in Sources */,
 				FBCE1EAD2B712862000AB1A8 /* AuthModel.swift in Sources */,
+				FBCE1EB22B720593000AB1A8 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

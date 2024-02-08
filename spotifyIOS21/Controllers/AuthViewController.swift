@@ -19,13 +19,14 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         return webView
     }()
     
-    var completionhandler: ((Bool) -> Void)?
+    public var completionhandler: ((Bool) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sign In"
         view.backgroundColor = .systemBackground
         view.addSubview(webView)
+        webView.navigationDelegate = self
         guard let url = AuthManager.shared.signInURL else {
             return
         }
@@ -34,7 +35,6 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        webView.navigationDelegate = self
         webView.frame = view.bounds
     }
     
@@ -42,7 +42,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         guard let url = webView.url else {
             return
         }
-        guard let code = URLComponents(string: url.absoluteString)?.queryItems?.first(where: {$0.name == "code" })?.value else {
+        guard let code = URLComponents(string: url.absoluteString)?.queryItems?.first(where: { $0.name == "code" })?.value else {
             return
         }
         webView.isHidden = true
