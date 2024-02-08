@@ -11,7 +11,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
@@ -20,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if AuthManager.shared.isSignedIn {
             window.rootViewController = SearchViewController()
         } else {
-            let navVc = UINavigationController(rootViewController: AuthViewController())
+            let navVc = UINavigationController(rootViewController: WelcomeViewController ())
             navVc.navigationBar.prefersLargeTitles = true
             navVc.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
             window.rootViewController = navVc

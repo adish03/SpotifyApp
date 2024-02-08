@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if AuthManager.shared.isSignedIn {
             window.rootViewController = SearchViewController()
         } else {
-            let navVc = UINavigationController(rootViewController: AuthViewController())
+            let navVc = UINavigationController(rootViewController: WelcomeViewController())
             navVc.navigationBar.prefersLargeTitles = true
             navVc.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
             window.rootViewController = navVc

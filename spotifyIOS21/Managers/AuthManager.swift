@@ -23,7 +23,7 @@ final class AuthManager {
     
     public var signInURL: URL? {
         let base = "https://accounts.spotify.com/authorize"
-        let string = "\(base)?response_type=code&client_id=\(Constants.clientID)&scope=\(Constants.scopes)&redirect_uri=\(Constants.redirectURI)&show_dialog=TRUE     "
+        let string = "\(base)?response_type=code&client_id=\(Constants.clientID)&scope=\(Constants.scopes)&redirect_uri=\(Constants.redirectURI)&show_dialog=TRUE"
         return URL(string: string)
     }
     
@@ -95,14 +95,10 @@ final class AuthManager {
     }
     
     public func refreshIfNeeded(completion: @escaping (Bool) -> Void) {
-//        guard shouldRefreshToken else {
-//            completion(true)
-//            return
-//        }
         guard let refreshToken = self.refreshToken else {
             return
         }
-        // Refresh
+        // Refresh the token
         guard let url = URL(string: Constants.tokenAPIURL) else {
             return
         }
@@ -146,7 +142,7 @@ final class AuthManager {
     public func cacheToken(result: AuthResponse) {
         UserDefaults.standard.setValue(result.access_token, forKey: "access_token")
         if let refresh_token = result.refresh_token {
-            UserDefaults.standard.setValue(result.refresh_token, forKey: "refresh_token")
+            UserDefaults.standard.setValue(refresh_token, forKey: "refresh_token")
         }
         UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in)), forKey: "expirationDate")
     }
